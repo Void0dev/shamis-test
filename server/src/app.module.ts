@@ -12,6 +12,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { BroadcastModule } from './broadcast/broadcast.module';
 import { AdminModule } from './admin/admin.module';
 import { ChatModule } from './chat/chat.module';
+import { GameModule } from './game/game.module';
 
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { ChatModule } from './chat/chat.module';
     LoggerModule, 
     BroadcastModule,
     ChatModule,
+    GameModule,
   ],
 })
 export class AppModule {}

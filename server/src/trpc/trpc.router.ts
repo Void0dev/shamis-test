@@ -2,6 +2,7 @@ import { INestApplication, Injectable } from '@nestjs/common';
 import { TrpcService } from './trpc.service';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { AuthRouter } from '../auth/auth.router';
+import { GameRouter } from '../game/game.router';
 import type { Request, Response } from 'express';
 import { TrpcContext } from './types/TrpcContext';
 
@@ -10,11 +11,13 @@ export class TrpcRouter {
   constructor(
     private readonly trpc: TrpcService,
     private readonly authRouter: AuthRouter,
+    private readonly gameRouter: GameRouter,
   ) {}
 
   createRouter() {
     return this.trpc.router({
       auth: this.authRouter.createRouter(),
+      game: this.gameRouter.createRouter(),
     });
   }
 

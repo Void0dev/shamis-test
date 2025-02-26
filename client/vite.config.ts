@@ -43,4 +43,12 @@ export default defineConfig({
     }
   },
   publicDir: './public',
+  server: {
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      'infinite-maggot-relaxing.ngrok-free.app',
+      '.ngrok-free.app'  // Allow all ngrok-free.app subdomains
+    ]
+  }
 });

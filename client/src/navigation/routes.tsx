@@ -2,7 +2,7 @@ import type { RouteProps } from 'react-router-dom';
 
 import Rules from '@/pages/Rules/Rules';
 import Index from '../pages/Index/Index';
-import Chat from '../pages/Chat/Chat';
+import Room from '../pages/Room/Room';
 
 export const routes: RouteProps[] = [
     {
@@ -14,7 +14,7 @@ export const routes: RouteProps[] = [
         element: <Rules />
     },
     {
-        path: '/chat',
-        element: <Chat />
-    }
+        path: '/room/:id',
+        element: <Room />
+    },
 ];
