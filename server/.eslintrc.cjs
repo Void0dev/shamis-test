@@ -1,0 +1,30 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: ['plugin:@typescript-eslint/recommended'],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  ignorePatterns: ['.eslintrc.js', '.eslintrc.cjs'],
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'object-curly-spacing': ['error', 'always', { arraysInObjects: true, objectsInObjects: true }],
+    'indent': ['error', 2, { 'ignoredNodes': ['PropertyDefinition'] }],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
+    'max-len': ['error', { 'code': 150 }],
+    'arrow-parens': ['error', 'as-needed'],
+    'object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }],
+    'eol-last': ['error', 'always'],
+  },
+};

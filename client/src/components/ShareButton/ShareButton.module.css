@@ -1,0 +1,12 @@
+.button {
+    background: rgba(41, 144, 255, 0.15);
+    color: #2990FF;
+    border-radius: 20px;
+    padding: 8px 12px;
+
+    transition: opacity 0.15s ease-out;
+}
+
+.button:hover {
+    opacity: 0.85;
+}

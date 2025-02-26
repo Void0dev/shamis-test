@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --default-margin: 16px;
+}
+
+body {
+    --tg-theme-secondary-bg-color: #0f0f0f;
+    --tg-theme-section-bg-color: #212121;
+    --tg-theme-button-color: #2990ff;
+    --tg-theme-accent-text-color: #2990ff;
+    --tg-theme-link-color: #2990ff;
+    --tg-theme-bg-color: #2a2a2a;
+    --tg-theme-text-color: #ffffff;
+    --tgui--text_color: #ffffff;
+    background: var(--tg-theme-secondary-bg-color, black);
+    margin: 0;
+    font-family: "SF Pro", serif!important;
+}
+
+@font-face {
+    font-family: "SF Pro";
+    src: local("SF Pro"), url("fonts/SF-Pro-Regular.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Rounded";
+    src: local("SF Pro Rounded"),
+        url("fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
+    font-weight: normal;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* WebKit */
+}
